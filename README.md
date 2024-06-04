@@ -8,7 +8,7 @@ Welcome to the official repository of **ViLCo**, the first dedicated benchmark d
 
 Video Language Continual Learning aims to adapt to information from video and text inputs continuously, improving the model’s capacity to manage new tasks while preserving knowledge from prior tasks. Considering that video-language continual learning is a relatively under-explored area, establishing appropriate datasets is crucial for facilitating communication and research in this field. In this study, we present the first dedicated benchmark, ViLCo, designed to evaluate continual learning models across various video-text tasks. Specifically, the dataset comprises ten-minute-long videos and corresponding language queries collected from publicly available datasets. Furthermore, by introducing a novel memory-efficient framework incorporating self-supervised learning, we address specific challenges in video language continual learning such as memory complexity due to long video clips, natural language complexity due to open queries, and misalignment between text and video. We posit that ViLCo, with more diverse complexity than existing continual learning benchmarks, would serve as a critical tool for exploring the video-language domain, extending beyond conventional class-incremental tasks, and addressing complex and limited annotation issues.
 
-![cl_tasks](./figures/cl_tasks.png)
+![cl_tasks](./Figures/cl_tasks.png)
 
 ## Repository Contents
 
@@ -18,10 +18,13 @@ Video Language Continual Learning aims to adapt to information from video and te
 - **Documentation**: Detailed documentation to help you get started with using the ViLCo benchmark.
 
 ## Benchmark and Framework
-![framework](./figures/framework.png)
+![framework](./Figures/framework.png)
 
 
 ## Getting Started
+
+### Dataset
+Please download the datasets from this [link](https://zenodo.org)
 
 ### Prerequisites
 
