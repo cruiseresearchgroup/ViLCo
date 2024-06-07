@@ -1,0 +1,74 @@
+dataset_name: ego4d
+train_split: ['train']
+val_split: ['val']
+init_rand_seed: 0
+dataset: {
+  json_file: ./data/ego4d/ego4d_clip_annotations_v2.json,
+  feat_folder: ['/mnt/data728/datasets/ego4d_data/features/EgoVLPv2',
+                ],
+  file_prefix: ,
+  file_ext: ['.pt'],
+  num_classes: 110,
+  input_dim: [4096],
+  feat_stride: 1,
+  num_frames: 1,
+  trunc_thresh: 0.3,
+  crop_ratio: [0.9, 1.0],
+  max_seq_len: 1024,
+  force_upsampling: True,
+  use_text: True,
+  text_feat_folder: /mnt/data728/datasets/ego4d_data/features/CLIP_text_features_mq,
+  max_text_len: 128,
+  output_format: concat
+}
+model: {
+  backbone_arch: [1, 0, 1],
+  regression_range: [[0, 4], [2, 8]],
+  fpn_type: identity,
+  max_buffer_len_factor: 1.0,
+  # 1024 -> 512 -> 256  -> 128 -> 64 -> 32 -> 16 -> 8 -> 4 -> 2
+  # shrink the model for reduced input feature channels
+  n_head: 16,
+  embd_dim: [1024],
+  fpn_dim: 1024,
+  head_dim: 1024,
+  use_abs_pe: True,
+  use_cross_modal: True,
+  n_txt_in: 768,
+}
+opt: {
+  learning_rate: 0.0001,
+  epochs: 10,
+  weight_decay: 0.05,
+}
+loader: {
+  batch_size: 2,
+  num_workers: 8
+}
+train_cfg: {
+  init_loss_norm: 100,
+  clip_grad_l2norm: 1.0,
+  cls_prior_prob: 0.01,
+  center_sample: radius,
+  center_sample_radius: 1.5,
+  dropout: 0.1,
+  droppath: 0.1,
+  t_c_alpha: 0.8,
+  al_loss_weight: 0.2,
+  seg_loss_weight: 0.0,
+  cont_loss_weight: 0.0
+}
+
+test_cfg: {
+  voting_thresh: 0.9,
+  pre_nms_topk: 5000,
+  max_seg_num: 200,
+  min_score: 0.0001,
+  multiclass_nms: True,
+  nms_sigma: 0.99,
+  duration_thresh: 0.01,
+ }
+output_folder: ./logs/
+
+
+
