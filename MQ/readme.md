@@ -1,4 +1,4 @@
-# ViLCo-Bench
+# ViLCo-Bench-MQ
 
 ## Installation
 * NMS compilation
