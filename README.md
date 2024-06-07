@@ -72,6 +72,9 @@ We welcome contributions to the ViLCo-Bench benchmark!
 ## License
 ViLCo is licensed under a [MIT License](./LICENSE).
 
+## Acknowledgement
+This code is inspired by [vCLIMB](https://github.com/ojedaf/vCLIMB_Benchmark). We develop the benchmark model, inspired by [EgoVLP](https://github.com/showlab/EgoVLP), [EgoVLP-v2](https://github.com/facebookresearch/EgoVLPv2), [Ego4D-ASL](https://github.com/JonnyS1226/ego4d_asl), [Ground-NLQ](https://github.com/houzhijian/GroundNLQ), [VQLoC](https://github.com/hwjiang1510/VQLoC). Thanks for their contributions.
+
 ## Citation
 If you use ViLCo-Bench in your research, please cite our paper:
 ```
