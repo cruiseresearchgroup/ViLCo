@@ -1,0 +1,13 @@
+Objects: What did I put in X?
+Place: Where did I put X?
+Objects: Where is object X before / after event Y?
+People: When did I talk to or interact with person with role X?
+Objects: How many X’s? (quantity question)
+Objects: State of an object
+Objects: Where is object X?
+Objects: In what location did I see object X ?
+Objects: What X did I Y?
+Objects: What X is Y?
+Objects: Where is my object X?
+People: Who did I interact with when I did activity X?
+People: Who did I talk to in location X?
