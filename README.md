@@ -117,7 +117,6 @@ ViLCo-Bench
 ```
 Each directory contains data preparation, training/inference scripts, and we provided pre-extracted video and text features for new CL tasks.
 
-![tasks](./Figures/cl_tasks.png)
 
 ### 📊 1 - Dataset 
 Please download the full datasets from this [link](https://zenodo.org/records/11560095).
