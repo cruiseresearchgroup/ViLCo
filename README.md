@@ -121,10 +121,80 @@ Each directory contains data preparation, training/inference scripts, and we pro
 
 
 ### 📊 1 - Dataset 
-Please download the full datasets from this [link](https://zenodo.org/records/11560095).
+We provide metadata for the proposed MQ/NLQ/MQ tasks, detailing data subsets aligned with the tasks in each CL setup. To facilitate a quick start, we include pre-extracted visual and textual features. Additionally, we offer instructions for preparing the full datasets, allowing for easy extension to custom multi-modal data sources.
 
-Instead you may prefer to download the visio and text features directly. In this case please follow the instruction below:
-*
+#### Fast start
+Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11560095). Note that you should download all files in your folder, then run ```unzip ViLCo_data.zip```.
+<details>
+  <summary>
+
+  The data structure is shown as below:
+  ```bash
+  ViLCo_data
+  ├── feature_extraction
+  │   └── Feature extraction script for custom dataset, download scripts for additional visual features
+  ├── features
+  │   └── pre-extratced visual features.
+  ├── MQ_meta_data
+  │   └── metadata for moments query.
+  ├── NLQ_meta_data
+  │   └── metadata for natural language query.
+  ├── VQ_meta_data
+  │   └── metadata for visual query.
+  └── narration_data
+      └── pre-extracted narration features for self-supervised training.
+  ```
+
+  We provide pre-extracted features in ``features/``. You should also download visual features by provided scripts.
+  ##### For NLQ
+  ```
+  cd feature_extraction
+  ```
+  Download the EgoVLP features (optional: Internvideo, SlowFast)
+  ```
+  python download_features.py --feature_types egovlp
+  ```
+  Convert the feature into lmdb
+  ```
+  python convert_pt_to_lmdb.py
+  ```
+
+  For textual feature:
+
+  Please refer to [How_to_start](https://ego4d-data.org/docs/start-here/) to download CLIP textual features step by step. Note that the data type should be Features. You could also refer to [CLIP_TEXT_TOKEN_EXTRACTOR](https://github.com/houzhijian/CONE/blob/main/feature_extraction/ego4d_clip_token_extractor.py) by extracting features manually.
+
+  ##### For MQ
+  The EgoVLP-v2 features could also be downloaded as:
+  ```
+  wget https://www.cis.jhu.edu/~shraman/EgoVLPv2/pre-extracted_features/EgoMQ/EgoVLPv2.tgz
+  tar -xvzf EgoVLPv2.tgz && rm EgoVLPv2.tgz
+  ```
+
+  For textual feature:
+  We provide extracted features in ``features/MQ``.
+
+  ##### For VQ
+  Please follow [vq2d baseline](https://github.com/EGO4D/episodic-memory/tree/main/VQ2D#preparing-data-for-training-and-inference) step 1/2/4/5 to process the dataset into video clips.
+
+  ##### Meta data
+  ``NLQ_meta_data/ego4d_nlq_{split}_v2.jsonl`` includes clip annotations & query information on NLQ.
+  ``NLQ_meat_data/ego4d_nlq_query_incremental_13.pkl`` includes splitted data for CL sub-tasks on NLQ.
+  ``MQ_meta_data/ego4d_clip_annotations_v2.json`` includes clip annotations & query information on MQ.
+  ``MQ_meat_data/ego4d_mq_query_incremental_22_all.pkl`` includes splitted data for CL sub-tasks on MQ.
+  ``MQ_meta_data/vq_{split}.json`` includes clip annotations & query information on VQ.
+  ``MQ_meat_data/ego4d_vq_query_incremental_5.pkl`` includes splitted data for CL sub-tasks on VQ.
+
+  ##### Narration data
+  See in ``narration_data``
+
+  You could also download it from google driver [Link](https://drive.google.com/file/d/1F3w_RqGPHl71BLbp5T6HYBOt-H8zuT0W/view?usp=drive_link)
+  </summary>
+</details>
+
+#### Fully preparation
+1. Download original video data from Ego4d.
+2. Extract visual/textual features for data pre-processing.
+3. Generate metadata for sepecific tasks.
 
 ### 📊 2 - Evaluation 
 
