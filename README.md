@@ -125,6 +125,7 @@ We provide metadata for the proposed MQ/NLQ/MQ tasks, detailing data subsets ali
 
 #### Fast start
 Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11560095). Note that you should download all files in your folder, then run ```unzip ViLCo_data.zip```.
+Details:
 <details>
   <summary>
   The data structure is shown as below:
