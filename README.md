@@ -40,7 +40,9 @@ learning and mimics long-term and short-term memory effects. This framework addr
 ViLCo-Bench, with greater complexity compared to existing continual learning benchmarks, would serve as a critical tool for exploring the video-language domain,
 extending beyond conventional class-incremental tasks, and addressing complex and limited annotation issues.
 
-![cl_tasks](./Figures/benchmark.png)
+
+<img src="./Figures/benchmark.png" alt="benchmark.png" style="width: 50%; height: auto;">
+
 
 ## 📂 Repository Contents
 
@@ -51,7 +53,7 @@ extending beyond conventional class-incremental tasks, and addressing complex an
 
 ## 🛠️ Benchmark and Framework
 
-![framework](./Figures/framework.png)
+<img src="./Figures/framework.png" alt="framework" style="width: 80%; height: auto;">
 
 ### Dataset Summary
 We used Ego4D dataset consisting of 3670 hours of egocentric videos. We selected
