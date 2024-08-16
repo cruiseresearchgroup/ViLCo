@@ -194,7 +194,7 @@ Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11
 #### Fully preparation
 1. Download original video data from Ego4d. Pleas refer to [Start Here](https://ego4d-data.org/docs/start-here/) to download the full videos and their corresponding annotations. After you download the CLI, you could run command ```ego4d --output_directory="~/ego4d_data" --datasets full_scale annotations```.
 2. Extract visual/textual features for data pre-processing. In our paper, we finally use [EgoVLP-v2](https://shramanpramanick.github.io/EgoVLPv2/) features. Also, the combination of multiple visual features can achieve good results. 
-<details>
+  <details>
   <summary>Details:</summary>
   For offline data prepartion, please follow the same steps as below:
 
@@ -204,7 +204,11 @@ Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11
 
   In VQ, please refer to five steps in [Preparing Dataset](https://github.com/facebookresearch/vq2d_cvpr/blob/main/INSTALL.md).
   </details>
+
 3. Generate metadata for sepecific tasks. we provide corresponding scripts in ```scripts\```. Put the python file into its corresponding task dictionary and change the detailed data path.
+
+#### Add new tasks
+For expanding ViLCo to custom data/tasks, please refer to [Add New Task](Add_New_Task.md).
 
 ### 📊 2 - Evaluation 
 When running bash train_cl.sh baseline 0 mq_vilco (taking MQ as an example), it will automatically validate performance on val-set (e.g., average mAP, Recall@1x).
