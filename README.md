@@ -198,20 +198,20 @@ Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11
     <summary>Details:</summary>
     For offline data prepartion, please follow the same steps as below:
   
-    In MQ, using `python convert_annotation.py` to convert official annotation to the processed one. And put it into `MQ/data/ego4d`. create config file corrsponding to training. And put it into `MQ/configs/`.
+    In MQ, use `python convert_annotation.py` to convert the official annotation to the processed one. And put it into `MQ/data/ego4d`. create a config file corresponding to training. And put it into `MQ/configs/`.
   
     In NLQ, please refer to [File_Precess_RM](https://github.com/houzhijian/GroundNLQ/tree/main/ego4d_data).
   
-    In VQ, please refer to five steps in [Preparing Dataset](https://github.com/facebookresearch/vq2d_cvpr/blob/main/INSTALL.md).
+    In VQ, please refer to the five steps in [Preparing Dataset](https://github.com/facebookresearch/vq2d_cvpr/blob/main/INSTALL.md).
     </details>
 
-3. Generate metadata for sepecific tasks. we provide corresponding scripts in ```scripts\```. Put the python file into its corresponding task dictionary and change the detailed data path.
+3. Generate metadata for specific tasks. we provide corresponding scripts in ```scripts\```. Put the python file into its corresponding task dictionary and change the detailed data path.
 
 
 ### 📊 2 - Evaluation 
 Run the following command to train and evaluate the model across MQ tasks:
 ```
-    python train_cl.py ./configs/mq_vilco.yaml
+    bash train_cl.sh mq_vilco DEVICE_NO PORT_NO
 ```
 
 (taking MQ as an example), it will automatically validate performance on val-set (e.g., average mAP, Recall@1x).
