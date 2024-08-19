@@ -207,11 +207,17 @@ Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11
 
 3. Generate metadata for sepecific tasks. we provide corresponding scripts in ```scripts\```. Put the python file into its corresponding task dictionary and change the detailed data path.
 
-#### Add new tasks
-For expanding ViLCo to custom data/tasks, please refer to [Add New Task](Add_New_Task.md).
 
 ### 📊 2 - Evaluation 
-When running bash train_cl.sh baseline 0 mq_vilco (taking MQ as an example), it will automatically validate performance on val-set (e.g., average mAP, Recall@1x).
+Run the following command to train and evaluate the model across MQ tasks:
+```
+    python train_cl.py ./configs/mq_vilco.yaml
+```
+
+(taking MQ as an example), it will automatically validate performance on val-set (e.g., average mAP, Recall@1x).
+
+#### Add new tasks
+For expanding ViLCo to custom data/tasks, please refer to [Add New Task](Add_New_Task.md).
 
 ## 🤝 Contributing
 We welcome contributions to the ViLCo-Bench benchmark! Please feel free to join the leaderboard, open issues, submit pull requests, or provide suggestions.
