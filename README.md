@@ -194,16 +194,16 @@ Downdown pre-extracted features from zenodo [Link](https://zenodo.org/records/11
 #### Fully preparation
 1. Download original video data from Ego4d. Pleas refer to [Start Here](https://ego4d-data.org/docs/start-here/) to download the full videos and their corresponding annotations. After you download the CLI, you could run command ```ego4d --output_directory="~/ego4d_data" --datasets full_scale annotations```.
 2. Extract visual/textual features for data pre-processing. In our paper, we finally use [EgoVLP-v2](https://shramanpramanick.github.io/EgoVLPv2/) features. Also, the combination of multiple visual features can achieve good results. 
-  <details>
-  <summary>Details:</summary>
-  For offline data prepartion, please follow the same steps as below:
-
-  In MQ, using `python convert_annotation.py` to convert official annotation to the processed one. And put it into `MQ/data/ego4d`. create config file corrsponding to training. And put it into `MQ/configs/`.
-
-  In NLQ, please refer to [File_Precess_RM](https://github.com/houzhijian/GroundNLQ/tree/main/ego4d_data).
-
-  In VQ, please refer to five steps in [Preparing Dataset](https://github.com/facebookresearch/vq2d_cvpr/blob/main/INSTALL.md).
-  </details>
+    <details>
+    <summary>Details:</summary>
+    For offline data prepartion, please follow the same steps as below:
+  
+    In MQ, using `python convert_annotation.py` to convert official annotation to the processed one. And put it into `MQ/data/ego4d`. create config file corrsponding to training. And put it into `MQ/configs/`.
+  
+    In NLQ, please refer to [File_Precess_RM](https://github.com/houzhijian/GroundNLQ/tree/main/ego4d_data).
+  
+    In VQ, please refer to five steps in [Preparing Dataset](https://github.com/facebookresearch/vq2d_cvpr/blob/main/INSTALL.md).
+    </details>
 
 3. Generate metadata for sepecific tasks. we provide corresponding scripts in ```scripts\```. Put the python file into its corresponding task dictionary and change the detailed data path.
 
