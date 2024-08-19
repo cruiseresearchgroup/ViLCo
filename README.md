@@ -16,17 +16,17 @@ We present three unique video-language continual learning tasks including:
 Also, we provide a curated dataset with annotations for each episodic memory task. 
 Additionally, we propose novel memory-efficient models tailored for **ViLCo-Bench**. 
 
-In this repository, we provide the source code, access to the dataset, preparing the data, and the source code for training and evaluating **ViLCo** and other baselines across the benchmark.
+In this repository, we provide the source code, access to the dataset, prepare the data, and the source code for training and evaluating **ViLCo** and other baselines across the benchmark.
 
 ## 📑 Table of Contents
 
-- [🌟 Abstract](#abstract)
-- [📂 Repository Contents](#repository-contents)
-- [🛠️ Benchmark and Framework](#benchmark-and-framework)
-  - [Dataset Summary](#dataset-summary)
-  - [Leaderboard](#leaderboard)
-- [🚀 Getting Started](#getting-started)
-- [📚 Citation](#citation)
+- [🌟 Abstract](#-abstract)
+- [📂 Repository Contents](#-repository-contents)
+- [🛠️ Benchmark and Framework](#-benchmark-and-framework)
+  - [Dataset Summary](#-dataset-summary)
+  - [Leaderboard](#-leaderboard)
+- [🚀 Getting Started](#-getting-started)
+- [📚 Citation](#-citation)
 
 
 
