@@ -19,7 +19,7 @@ dataset: {
   use_text: True,
   text_feat_folder: /mnt/data728/datasets/ego4d_data/features/CLIP_text_features_mq,
   use_narration: True,
-  narration_feat_folder: /mnt/data728/tianqi/ego4d_asl/data/em_narration_clip_token_features,
+  narration_feat_folder: /mnt/data728/datasets/ego4d_data/features/em_narration_clip_token_features,
   max_text_len: 128,
   output_format: concat
 }
