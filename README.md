@@ -103,6 +103,13 @@ Clone this repository and install the necessary dependencies:
    pip install -r requirements.txt
 ```
 
+* NMS compilation
+```
+cd ./MQ/libs/utils
+python setup.py install --user
+cd ../..
+```
+
 #### 📁 0.2 - Repository Structure
 
 The repository is organized as follows:

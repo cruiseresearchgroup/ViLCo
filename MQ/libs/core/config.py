@@ -33,6 +33,12 @@ DEFAULTS = {
         # if true, force upsampling of the input features into a fixed size
         # only used for ActivityNet
         "force_upsampling": False,
+        "use_narration": False,
+        "narration_feat_folder": None,
+        "use_text": False,
+        "text_feat_folder": None,
+        "max_text_len": 128,
+        "output_format": "concat",
     },
     "loader": {
         "batch_size": 8,
@@ -80,6 +86,8 @@ DEFAULTS = {
         "use_abs_pe": False,
         # use rel position encoding (added to self-attention)
         "use_rel_pe": False,
+        "use_cross_modal": False,
+        "n_txt_in": 768,
     },
     "train_cfg": {
         # radius | none (if to use center sampling)

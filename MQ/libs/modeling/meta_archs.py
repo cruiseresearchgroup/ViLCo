@@ -13,8 +13,6 @@ from .losses import ctr_diou_loss_1d, sigmoid_focal_loss, ctr_giou_loss_1d
 from .utils import calc_ious, calc_cls_scores, DeformConv1d, PackedDeformConv1d
 
 from ..utils import batched_nms
-from .ml_gcn import LabelGCN, LabelTransformer
-# from .roi_align import ROIAlign
 from torch.nn.init import normal_, constant_
 from ..cl_methods import Prompt
 from timm.utils.model_ema import ModelEmaV2

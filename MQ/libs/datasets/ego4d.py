@@ -41,6 +41,8 @@ class Ego4dDataset(Dataset):
         text_feat_folder,
         max_text_len,
         output_format,
+        use_narration,
+        narration_feat_folder,
     ):
         # file path
         assert os.path.exists(json_file)
@@ -490,7 +492,7 @@ class Ego4dCLDataset(Dataset):
         if self.is_training and self.use_narration:
             self.clip_textual_env = lmdb.open(self.narration_feat_folder, readonly=True, create=False, max_readers=4096 * 8, readahead=False)
             self.clip_textual_txn = self.clip_textual_env.begin(buffers=True)
-            narration_jsonl = "/g/data/hn98/tianqi/ego4d_asl/data/format_unique_pretrain_data_v2.jsonl"
+            narration_jsonl = "./data/format_unique_pretrain_data_v2.jsonl"
             with open(narration_jsonl, "r") as f:
                 narration_data = [json.loads(l.strip("\n")) for l in f.readlines()]
             self.narration_data = {}

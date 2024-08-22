@@ -23,7 +23,6 @@ from libs.utils import (train_one_epoch, valid_one_epoch, ANETdetection,
                         valid_one_epoch_cl_single_gpu, final_validate)
 from libs.cl_methods import on_task_update, on_task_mas_update
 import logging
-from eval import valid_performance
 from torch.distributed import init_process_group, destroy_process_group
 import pickle
 import torch.nn.functional as F

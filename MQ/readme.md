@@ -19,5 +19,10 @@ cd ../..
     * In `baseline_new.yaml`, you can specify annotation json_file, video features, training split and validation split, e.t.c.
 
 ## Train on MQ (train-set) with QIL setting
-* Change the train_split as `['train']` and val_split as `['val']`.
-* ```bash train_cl.sh baseline 0 mq_vilco``` where `mq_vilco` is the corresponding config yaml and `0` is the GPU ordinal.
+* ```bash train_cl.sh [config_name] [gpu id] [port num]```
+
+* For BIC method,
+    ```bash train_bic.sh mq_bic_all 0 29001```
+
+* For multi-task training,
+    ```bash train_val.sh baseline_new 0```
