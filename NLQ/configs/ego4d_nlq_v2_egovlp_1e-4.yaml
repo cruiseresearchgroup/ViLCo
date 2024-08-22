@@ -6,9 +6,9 @@ dataset: {
   json_file: ./ego4d_data/ego4d_nlq_v2_ori_data/nlq_val.json,
   train_jsonl_file: ./ego4d_data/ego4d_nlq_train_v2.jsonl,
   val_jsonl_file: ./ego4d_data/ego4d_nlq_val_v2.jsonl,
-  video_feat_dir: /g/data/hn98/tianqi/features_lmdb/egovlp_lmdb,
-  text_feat_dir: /g/data/po67/tianqi5751/ego4d_data/v2/features_lmdb/CLIP_text_features_train_lmdb,
-  val_text_feat_dir: /g/data/po67/tianqi5751/ego4d_data/v2/features_lmdb/CLIP_text_features_val_lmdb,
+  video_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/egovlp_lmdb,
+  text_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/CLIP_text_features_train_lmdb,
+  val_text_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/CLIP_text_features_val_lmdb,
   num_classes: 1,
   input_vid_dim: 256,
   input_txt_dim: 512,
@@ -61,4 +61,4 @@ test_cfg: {
   nms_sigma : 0.75,
   duration_thresh: 0.001,
 }
-output_folder: /g/data/hn98/tianqi/ckpt/
+output_folder: ./ckpt/

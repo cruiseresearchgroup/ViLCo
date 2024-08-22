@@ -6,9 +6,9 @@ dataset: {
   json_file: ./ego4d_data/ego4d_nlq_v2_ori_data/nlq_val.json,
   train_jsonl_file: ./ego4d_data/ego4d_nlq_train_v2.jsonl,
   val_jsonl_file: ./ego4d_data/ego4d_nlq_val_v2.jsonl,
-  video_feat_dir: /g/data/hn98/tianqi/features_lmdb/egovlp_lmdb,
-  text_feat_dir: /g/data/po67/tianqi5751/ego4d_data/v2/features_lmdb/CLIP_text_features_train_lmdb,
-  val_text_feat_dir: /g/data/po67/tianqi5751/ego4d_data/v2/features_lmdb/CLIP_text_features_val_lmdb,
+  video_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/egovlp_lmdb,
+  text_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/CLIP_text_features_train_lmdb,
+  val_text_feat_dir: /mnt/data728/datasets/ego4d_data/features/features_lmdb/CLIP_text_features_val_lmdb,
   num_classes: 1,
   input_vid_dim: 256,
   input_txt_dim: 512,
@@ -18,7 +18,7 @@ dataset: {
   max_seq_len: 2560,
   enable_temporal_jittering: False,
   use_narration: False,
-  narration_feat_folder: /g/data/hn98/tianqi/ego4d_data/em_narration_clip_token_features,
+  narration_feat_folder: /mnt/data728/datasets/ego4d_data/features/em_narration_clip_token_features,
 }
 model: {
   fpn_type: identity,
@@ -83,4 +83,4 @@ cl_cfg: {
   use_adapter: False,
   adapt_blocks: [0,1,2,3,4]
 }
-output_folder: /g/data/hn98/tianqi/ckpt/
+output_folder: ./ckpt/
