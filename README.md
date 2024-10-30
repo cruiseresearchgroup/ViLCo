@@ -241,11 +241,13 @@ This material is based upon work supported by the International Technology Cente
 ## 📚  Citation
 If you use ViLCo-Bench in your research, please cite our paper:
 ```
-@article{Tang2024vilco,
-  title={ViLCo-Bench: VIdeo Language COntinual learning Benchmark},
+@inproceedings{
+  Tang2024vilcobench,
+  title={Vi{LC}o-Bench: {VI}deo Language {CO}ntinual learning Benchmark},
   author={Tianqi Tang, Shohreh Deldari, Hao Xue, Celso De Melo, Flora Salim},
-  journal={Under review},
+  booktitle={The Thirty-eight Conference on Neural Information Processing Systems Datasets and Benchmarks Track},
   year={2024},
+  url={https://openreview.net/forum?id=hSAu90mDkC}
 }
 ```
 
